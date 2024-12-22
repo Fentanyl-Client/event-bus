@@ -28,13 +28,14 @@ public class MyBaseEvent extends SimpleEvent {
 
 ```java
 public class MyBaseEventListener extends SimpleEventListener<MyBaseEvent> {
-    @Override
+    @Listener
     public void onEvent(MyBaseEvent event) {
         System.out.println("Received event: " + event.getMessage());
     }
     
     // or...
     
+    @Listener
     private final EventListener<MyBaseEvent> listener = event -> {
         System.out.println("Received event: " + event.getMessage());
     };
