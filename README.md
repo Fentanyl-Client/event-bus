@@ -71,8 +71,3 @@ eventDispatcher.unregister(eventListener);
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- [Fentanyl Client](https://github.com/Fentanyl-Client)
-- [Jitpack](https://jitpack.io)
