@@ -44,10 +44,6 @@ dependencies {
 }
 
 // Tasks:
-tasks.withType<JavaCompile> {
+tasks.withType(JavaCompile::class.java) {
     options.encoding = "UTF-8"
-}
-
-tasks.test {
-    useJUnitPlatform()
 }
