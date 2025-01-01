@@ -1,26 +1,6 @@
-import java.io.BufferedReader
-
 plugins {
     id("java")
 }
-
-// Functions:
-fun getGitTag(): String = executeCommand("git describe --tags --always")
-
-private fun executeCommand(command: String): String {
-    return try {
-        val process = ProcessBuilder(command.split(" "))
-            .redirectErrorStream(true)
-            .start()
-        process.inputStream.bufferedReader().use(BufferedReader::readText).trim()
-    } catch (e: Exception) {
-        "Error: ${e.message}"
-    }
-}
-
-// Project properties:
-project.version = (project.findProperty("version") as String)
-    .replace("{gitCommitTag}", getGitTag())
 
 // Toolchains:
 java {
